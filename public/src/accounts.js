@@ -1,6 +1,10 @@
+
 function findAccountById(accounts, id) {
   // YOUR SOLUTION HERE
+  const findId = accounts.find((accountNum) => accountNum.id == id);
   // Hint: You can use the [`find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method here. 
+  
+  return findId;
 }
 
 function sortAccountsByLastName(accounts) {
