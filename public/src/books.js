@@ -1,9 +1,15 @@
 function findAuthorById(authors, id) {
   // YOUR SOLUTION HERE
+  const findAuthor = authors.find((AuthorId) => AuthorId.id == id);
+
+  return findAuthor;
 }
 
 function findBookById(books, id) {
   // YOUR SOLUTION HERE
+  const findBook = books.find((bookID) => bookID.id == id);
+
+  return findBook;
 }
 
 // NOTE: YOU DON'T HAVE TO EDIT THE FUNCTIONS BELOW
