@@ -10,7 +10,11 @@ function getTotalAccountsCount(accounts) {
 
 function getBooksBorrowedCount(books) {
   // YOUR SOLUTION HERE
-  return books.filter(book => book.!returned).length;
+  const borrowedBooksCount = books
+  .flatMap(book => book.borrows) // Flatten the array of borrow entries
+  .filter(borrow => !borrow.returned) // Filter out the borrowed books
+  .length; // Count the number of borrowed entries
+  return borrowedBooksCount;
   // Hint: You can use the [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method here. 
   // If you get stuck, feel free to take a look at this repl.it: https://replit.com/@thinkful/getBooksBorrowedCount#index.js
 }
